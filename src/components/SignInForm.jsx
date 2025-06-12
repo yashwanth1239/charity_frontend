@@ -17,8 +17,16 @@ const SignInForm = () => {
         password,
       });
 
-      setMessage('Login successful!');
-      setTimeout(() => navigate('/home'), 1000);
+      const { token, email: userEmail } = res.data;
+
+      if (token && userEmail) {
+        localStorage.setItem('authToken', token);
+        localStorage.setItem('userEmail', userEmail);
+        setMessage('Login successful!');
+        setTimeout(() => navigate('/home'), 1000);
+      } else {
+        setMessage('Unexpected response from server.');
+      }
     } catch (error) {
       if (error.response) {
         setMessage(error.response.data.message || 'Login failed.');
@@ -55,7 +63,7 @@ const SignInForm = () => {
         />
         <a href="#">Forgot Your Password?</a>
         <button type="submit">Sign In</button>
-        {message && <p style={{ color: 'red' }}>{message}</p>}
+        {message && <p style={{ color: message.includes('successful') ? 'green' : 'red' }}>{message}</p>}
       </form>
     </div>
   );
