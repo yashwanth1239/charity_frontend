@@ -166,3 +166,65 @@ button {
 .bottom-cards span {
   font-size: 2rem;
 }
+.success-message, .error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.spinner-small {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.required-note, .security-note {
+  font-size: 0.9em;
+  color: #666;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.security-note {
+  margin-top: 4px;
+}
+
+.donate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.donate-button.loading {
+  opacity: 0.8;
+}
+
+.form-input:disabled, .form-select:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

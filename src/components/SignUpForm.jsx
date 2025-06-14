@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './SignUp.css';
+
 
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
@@ -27,8 +29,8 @@ const SignUpForm = () => {
     ) {
       setMessage(responseMessage); // "Email already registered."
     } else {
-      setMessage('Registration successful!');
-      setTimeout(() => navigate('/home'), 1000);
+      setMessage('Registration successful Sign in with your credentials!');
+      setTimeout(() => navigate('/login'), 1000);
     }
   } catch (error) {
     console.error('Registration error:', error);
