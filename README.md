@@ -1,12 +1,58 @@
-# React + Vite
+# Charity Donation Frontend Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+This is the **frontend** for a charity donation platform where users can support multiple causes such as **preventing animal cruelty** and **preventing child hunger**.  
+The application provides a clean and responsive user interface, supports **user authentication**, **donation history viewing**, and **secure logout**, with integration points for backend APIs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Features
+- **User Authentication**
+  - Login and registration forms with validation.
+- **Cause-Based Donations**
+  - Separate pages for different donation categories.
+- **Donation History**
+  - Displays all previous donations fetched from backend APIs.
+- **Logout Functionality**
+  - Securely ends the user session on frontend.
+- **Responsive Design**
+  - Works seamlessly on desktops, tablets, and mobiles.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6+)**
+- **React.js (Vite)**
+- **Axios** for API calls
+- **ESLint** for code quality
+
+---
+
+## 📂 Folder Structure
+├── public/ # Static files (images, icons, etc.)
+├── src/ # Frontend source code
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Login, Register, History, Donation pages
+│ ├── services/ # API integration helpers
+│ ├── App.js # Main application component
+│ └── index.js # React entry point
+├── index.html # Root HTML template
+├── package.json # Dependencies and scripts
+├── vite.config.js # Vite build configuration
+└── README.md # Project documentation
+
+---
+
+## 📥 Installation & Setup
+```bash
+# Clone the repository
+git clone https://github.com/yashwanth1239/charity-donation-frontend.git
+cd charity-donation-frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
